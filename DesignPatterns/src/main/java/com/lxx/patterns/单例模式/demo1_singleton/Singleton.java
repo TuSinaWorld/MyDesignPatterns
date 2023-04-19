@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 public class Singleton implements Serializable {
 
-    private static Singleton demo1Singleton = new Singleton();
+    private final static Singleton demo1Singleton = new Singleton();
 
     //私有构造方法,防止误调用
     private Singleton(){
@@ -16,6 +16,10 @@ public class Singleton implements Serializable {
     }
 
 
+    //获取单例对象
+    public static Singleton newInstance(){
+        return demo1Singleton;
+    }
 
 
     //针对反序列化破坏单例做出提防
