@@ -7,7 +7,8 @@ public class Singleton_Lazy implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    private static Singleton_Lazy demo2Singleton;
+    //为了避免空指针异常,需设置为volatile类型~~
+    private static volatile Singleton_Lazy demo2Singleton;
 
     //依然是私有构造方法,原因依旧是防止误创建~
     private Singleton_Lazy(){
@@ -18,7 +19,7 @@ public class Singleton_Lazy implements Serializable {
     }
 
     //获取单例方法
-    private static Singleton_Lazy newInstance(){
+    public static Singleton_Lazy newInstance(){
         //使用双重检查锁机制避免多线程情况下单例的重复创建~~
         if(demo2Singleton == null){
             synchronized (Singleton_Lazy.class){
