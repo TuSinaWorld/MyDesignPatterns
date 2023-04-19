@@ -2,7 +2,10 @@ package com.lxx.patterns.单例模式.demo1_singleton;
 
 import java.io.Serializable;
 
+//模拟序列化后可能遇见的问题
 public class Singleton implements Serializable {
+
+    private static final long serialVersionUID = 1L;
 
     private final static Singleton demo1Singleton = new Singleton();
 
