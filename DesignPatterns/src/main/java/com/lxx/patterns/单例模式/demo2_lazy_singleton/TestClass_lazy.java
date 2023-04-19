@@ -9,6 +9,5 @@ public class TestClass_lazy {
         Singleton_Lazy s2 = Singleton_Lazy.newInstance();
         //比较其是否相同判断是否为单例~
         System.out.println(s1.hashCode() == s2.hashCode());
-
     }
 }
