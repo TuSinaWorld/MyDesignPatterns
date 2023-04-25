@@ -32,6 +32,7 @@ public abstract class Person implements Cloneable{
     //此处深克隆属于超级简略的不可通用实现~~
     @Override
     protected Object clone() throws CloneNotSupportedException {
-        return ((Person)super.clone()).setTool(new Tool());
+        //修正bug:之前脑抽,用Tool的初始化类赋进去了...已经修正~
+        return ((Person)super.clone()).setTool((Tool)getTool().clone());
     }
 }

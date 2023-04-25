@@ -4,7 +4,7 @@ package com.lxx.patterns.原型模式.demo_deepClone;
 // 这叫严谨(一本正经)
 public class TestClass {
     public static void main(String[] args) {
-        //获取容器中的原型~正常生存环境可不能这么玩
+        //获取容器中的原型~正常生产环境可不能这么玩
         Person a = GetPerson.map.get("A");
         //获取原型的克隆~
         Person a1 = GetPerson.getPerson("A");
