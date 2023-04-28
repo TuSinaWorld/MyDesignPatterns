@@ -5,7 +5,7 @@ import java.lang.reflect.InvocationTargetException;
 public class TestClass {
     //测试类
     public static void main(String[] args) throws InvocationTargetException, InstantiationException, IllegalAccessException {
-        System.getProperties().put("sun.misc.ProxyGenerator.saveGeneratedFiles","true");
+//        System.getProperties().put("sun.misc.ProxyGenerator.saveGeneratedFiles","true");
 
         //获取目标类
         Target tc = new Target();
